@@ -1,3 +1,11 @@
+ :root {
+--lightmode:#fafafa;
+--darkmode:#121212;
+}
+
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -18,3 +26,61 @@ body {
     padding: 20px;
     border: 20px solid black;
 }
+
+.animation-wrapper {
+    margin-top: 20px;
+    height: 400px;
+    background-color: #3f1515;
+    color: #f4f4f4;
+}
+
+.animation {
+    width:100px;
+    height:100px;
+    background-color: aqua;
+    position: relative;
+
+    animation-name: my-anime;
+    animation-duration:  10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes my-anime {
+    0% {
+        background-color:aqua ;
+        top: 0px;
+        left: 0px;
+    }
+
+    25% {
+        background-color: crimson;
+        top: 0px;
+        left:150px; 
+    }
+
+    50% {
+        background-color: rgb(19, 218, 152);
+        top:150px;
+        left:150px;
+    }
+
+    75% {
+        background-color: rgb(35, 17, 175);
+        top:150px;
+        left: 0px;
+    }
+
+    100% {
+         background-color:aqua ;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .animation-wrapper {
+    background-color: var(--darkmode);
+    color: #fafafa;
+}
+    }

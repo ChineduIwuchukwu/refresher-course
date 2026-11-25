@@ -78,7 +78,7 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
     .animation-wrapper {
     background-color: var(--darkmode);
     color: #fafafa;
